@@ -1,6 +1,9 @@
 package com.chifan.demo.service;
 
 import com.chifan.demo.dataobject.SellerInfo;
+import com.chifan.demo.pojo.Seller;
+
+import java.util.List;
 
 public interface SellerService {
     /**
@@ -9,4 +12,11 @@ public interface SellerService {
      * @return
      */
     SellerInfo findSellerInfoByOpenid(String openid);
+
+    int createSeller(Seller seller);
+
+    List<Seller> findByUserName(String userName);
+
+    Seller validLoginInfo(String userName, String password);
+
 }
